@@ -52,5 +52,5 @@ for i in range(acccounts):
     
 current_time = time.ctime()
 with open("log.txt", "a", encoding="utf-8") as log_file:   
-    log_file.write(f"{current_time}-{'Success' if success else 'Failed'}
+    log_file.write(f"{current_time}-{'Success' if success else 'Failed'}\n)
 
