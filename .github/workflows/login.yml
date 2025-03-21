@@ -17,9 +17,8 @@ jobs:
         with:
           python-version: '3.12'
           cache: 'pip'
-
-      - name: Install Selenium
-        run: pip install selenium==4.17.2
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
       - name: Majsoul login
         run: python login.py ${{ secrets.EMAIL }} ${{ secrets.PASSWD }}
