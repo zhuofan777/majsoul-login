@@ -1,4 +1,5 @@
 import sys
+import random  # 导入 random 模块
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -19,7 +20,7 @@ for i in range(acccounts):
     driver.set_window_size(1000, 720)
     driver.get("https://game.maj-soul.net/1/")
     print(f'Account {i + 1} loading game...')
-    sleep(20)
+    sleep(random.randint(30, 60))  # 随机等待 30 到 60 秒
 
     # 2. Input email
     screen = driver.find_element(By.ID, 'layaCanvas')
@@ -44,7 +45,7 @@ for i in range(acccounts):
         .click() \
         .perform()
     print('Entering game...')
-    sleep(20)  # Loading...
+    sleep(random.randint(30, 60))  # 随机等待 30 到 60 秒
 
     # 5. Check if login is successful
     success = False  # Default to failed
