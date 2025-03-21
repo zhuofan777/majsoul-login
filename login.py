@@ -5,6 +5,8 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
+with open("log.txt", "a", encoding="utf-8") as log_file:   
+    log_file.write(f"{current_time}-{'Success' if success else 'Failed'}-{execution_time:.2f}s\n")
 
 acccounts = int(len(sys.argv[1:])/2)
 print(f'Config {acccounts} accounts')
