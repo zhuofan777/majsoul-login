@@ -27,7 +27,7 @@ try:
         driver.set_window_size(1000, 720)  
         driver.get("https://game.maj-soul.net/1/")  
         print(f'Account {i + 1} loading game...')  
-        sleep(20)  
+        sleep(60)  
 
         # 2. 输入邮箱  
         screen = driver.find_element(By.ID, 'layaCanvas')  
@@ -52,7 +52,7 @@ try:
             .click() \
             .perform()  
         print('Entering game...')  
-        sleep(20)  # 等待登录完成  
+        sleep(60)  # 等待登录完成  
         print('Login success')  
         driver.quit()  
 
